@@ -19,7 +19,7 @@
   <figure>
     <img src="./images/zav.png" alt="Overview screenshot">
     <figcaption style="font-weight: bold; font-size: 14px; color: #444; margin-top: 4px; text-align: center;">
-      Overview of the app – see your project at a glance.
+      Overview of the app – see your Github issues and their dependeent issues in project at a glance.
     </figcaption>
   </figure>
 
