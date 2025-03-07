@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Masters-App</title>
 </head>
 <body>
 
-  <h1>Masters-App</h1>
+  <h1>Github seen thrrough agile planning app</h1>
   <p>
     Masters-App is designed to connect GitHub’s API and agile development principles in one cohesive platform. 
     Whether you’re a solo developer or part of a scrum team, Masters-App streamlines your workflow 
