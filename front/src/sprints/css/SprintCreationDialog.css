@@ -1,0 +1,1009 @@
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.dialog-overlay .dialog {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 80%;
+  padding: 30px 40px;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  height:max-content;
+}
+
+/* Step Content */
+.step-content {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Dialog Actions */
+.dialog-actions {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  margin-top: 30px;
+}
+
+.dialog-button {
+  padding: 12px 25px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+
+.dialog-button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.dialog-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.cancel-button {
+  background-color: #cccccc;
+  color: #fff;
+}
+
+.back-button {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.next-button,
+.save-button {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Cards */
+.card {
+  background-color: #f8f9fa;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.card:hover {
+  background-color: #e9f5ff;
+  border-color: transparent;
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.card.selected {
+  background-color: #e0f7ff;
+  border-color: transparent;
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
+}
+
+.card.selected::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #a1c4fd, #c2e9fb);
+  z-index: -1;
+  border-radius: 12px;
+}
+
+/* Card Content */
+.card h3,
+.card h4 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.card p {
+  margin: 10px 0 0 0;
+  color: #666;
+  font-size: 0.95em;
+}
+
+/* Cards Container */
+.repositories-list,
+.issues-list,
+.users-list {
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 25px;
+  padding-right: 10px; /* For scrollbar space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.repositories-list .repo-card {
+  width: 80%;
+  padding: 40px;
+}
+
+/* Scrollbar Styling */
+.repositories-list::-webkit-scrollbar,
+.issues-list::-webkit-scrollbar,
+.users-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.repositories-list::-webkit-scrollbar-thumb,
+.issues-list::-webkit-scrollbar-thumb,
+.users-list::-webkit-scrollbar-thumb {
+  background-color: #cccccc;
+  border-radius: 4px;
+}
+
+.repositories-list::-webkit-scrollbar-thumb:hover,
+.issues-list::-webkit-scrollbar-thumb:hover,
+.users-list::-webkit-scrollbar-thumb:hover {
+  background-color: #999999;
+}
+
+.repositories-list::-webkit-scrollbar-track,
+.issues-list::-webkit-scrollbar-track,
+.users-list::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* React Flow Wrapper */
+.reactflow-wrapper {
+  width: 100%;
+  height: 500px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Context Menu Styles */
+.context-menu {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.context-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.context-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.context-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+.context-menu li.disabled {
+  color: #999;
+  cursor: not-allowed;
+}
+.dialog.dialog-name{
+  width:500px;
+}
+.dialog.dialog-react{
+  width:80%;;
+}
+.dialog.dialog-repo{
+  width:500px;
+}
+.expected-time-input {
+  margin-top: 8px;
+}
+
+.expected-time-input label {
+  font-size: 14px;
+  color: #333;
+}
+
+.expected-time-input input {
+  margin-left: 8px;
+  padding: 6px 8px;
+  font-size: 14px;
+  width: 100px;
+}
+.step-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.step-content li {
+  margin-bottom: 16px;
+}
+
+.step-content li strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.dialog-button {
+  /* existing styles */
+}
+
+.dialog-button.next-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+/* Issues Container */
+.issues-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Issue Card */
+.issue-card {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.issue-card-header {
+  margin-bottom: 12px;
+}
+
+.issue-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0;
+}
+
+.issue-card-body {
+  display: flex;
+  align-items: center;
+}
+
+.expected-time-input {
+  display: flex;
+  align-items: center;
+}
+
+.expected-time-input label {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.time-icon {
+  margin-right: 8px;
+  color: #555555;
+}
+
+.time-input {
+  margin-left: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  width: 100px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.time-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+@media (max-width: 600px) {
+  .issue-card {
+    padding: 12px;
+  }
+
+  .issue-title {
+    font-size: 16px;
+  }
+
+  .expected-time-input label {
+    font-size: 13px;
+  }
+
+  .time-input {
+    width: 80px;
+  }
+}
+.step-content .issues-container{
+  width:50%;
+}
+.issues-container{
+  margin:0 auto;
+}
+/* Review Summary */
+.review-summary {
+  margin-top: 24px;
+}
+
+.sprint-info {
+  margin-bottom: 24px;
+}
+
+.sprint-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.issues-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Issue Card */
+.issue-card {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.issue-card-header {
+  margin-bottom: 12px;
+}
+
+.issue-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0;
+}
+
+.issue-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.issue-detail {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555555;
+}
+
+.detail-icon {
+  margin-right: 8px;
+  color: #007bff;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.dialog-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-button {
+  background-color: #cccccc;
+  color: #ffffff;
+}
+
+.save-button {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.save-button:hover {
+  background-color: #218838;
+}
+
+.back-button:hover {
+  background-color: #b3b3b3;
+}
+
+@media (max-width: 600px) {
+  .sprint-name {
+    font-size: 18px;
+  }
+
+  .issue-title {
+    font-size: 16px;
+  }
+
+  .issue-detail {
+    font-size: 13px;
+  }
+
+  .dialog-button {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+}
+/* Issue Card */
+.issue-card {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.issue-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.issue-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+
+.title-icon {
+  margin-right: 8px;
+  color: #007bff;
+}
+
+.edit-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.edit-icon {
+  margin-right: 4px;
+}
+
+.edit-button:hover {
+  text-decoration: underline;
+}
+
+.issue-card-body {
+  margin-top: 12px;
+}
+
+.assigned-users {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.assigned-user {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+/* Review & Save Step */
+
+/* Sprint Info */
+.sprint-info {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.sprint-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sprint-icon {
+  margin-right: 8px;
+  color: #007bff;
+}
+
+/* Tasks Container */
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Task Card */
+.task-card {
+  background-color: #f9f9f9;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.task-card-header {
+  margin-bottom: 16px;
+}
+
+.task-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+
+.task-icon {
+  margin-right: 8px;
+  color: #28a745;
+}
+
+/* Issue Card */
+.issue-card {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.issue-card-header {
+  margin-bottom: 12px;
+}
+
+.issue-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+
+.issue-icon {
+  margin-right: 8px;
+  color: #dc3545;
+}
+
+/* Issue Details */
+.issue-detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.detail-icon {
+  margin-right: 8px;
+  color: #007bff;
+}
+
+.assigned-users {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-left: 8px;
+}
+
+.assigned-user {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 1px solid #cccccc;
+}
+
+.issue-detail strong {
+  margin-left: 4px;
+  color: #333333;
+}
+
+/* Dialog Actions */
+.dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.dialog-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.back-button {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}
+
+.save-button {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.save-button:hover {
+  background-color: #0069d9;
+}
+/* Manage Tasks Step */
+
+/* Task Step Content */
+.task-step-content {
+  padding: 16px;
+}
+
+/* Tasks Container */
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+/* Task Card */
+.task-card {
+  background-color: #f9f9f9;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.task-card-header {
+  margin-bottom: 12px;
+}
+
+.task-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+
+.task-icon {
+  margin-right: 8px;
+  color: #28a745;
+}
+
+.task-card-body {
+  padding-left: 24px;
+}
+
+.task-issues-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.task-issues-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.task-issue-item {
+  font-size: 16px;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.issue-icon {
+  margin-right: 8px;
+  color: #dc3545;
+}
+
+/* Dialog Actions */
+.dialog-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.dialog-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-task-button {
+  background-color: #28a745;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.add-task-button:hover {
+  background-color: #218838;
+}
+
+.button-icon {
+  margin-right: 8px;
+}
+
+.next-button {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.next-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.next-button:not(:disabled):hover {
+  background-color: #0069d9;
+}
+.dialog{
+  height: 85%;
+}
+.issue-card.time{
+  width : 80%;
+  margin: 0 auto;
+}
+/* Manage Tasks Step */
+
+/* Task Step Content */
+.task-step-content {
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.task-step-content h2 {
+  font-size: 24px;
+  color: #333333;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.task-step-content h2::before {
+  content: '';
+  display: inline-block;
+  margin-right: 8px;
+  width: 24px;
+  height: 24px;
+  background-image: url('https://img.icons8.com/ios-filled/50/000000/task.png'); /* Replace with your desired icon URL */
+  background-size: cover;
+}
+
+/* Tasks Container */
+.tasks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+/* Task Card */
+.task-card {
+  background-color: #f9f9f9;
+  border-left: 4px solid #007bff;
+  border-radius: 8px;
+  padding: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Task Card Header */
+.task-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* Task Title */
+.task-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+
+.task-icon {
+  margin-right: 8px;
+  color: #007bff;
+}
+
+/* Task Actions */
+.task-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Edit Task Button */
+.edit-task-button,
+.delete-task-button {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.edit-task-button:hover,
+.delete-task-button:hover {
+  background-color: #e6f0ff;
+}
+
+.delete-task-button {
+  color: #dc3545;
+}
+
+.delete-task-button:hover {
+  background-color: #ffe6e6;
+}
+
+.action-icon {
+  margin-right: 4px;
+}
+
+/* Task Card Body */
+.task-card-body {
+  padding-left: 24px;
+}
+
+/* Task Issues Title */
+.task-issues-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+/* Task Issues List */
+.task-issues-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Task Issue Item */
+.task-issue-item {
+  font-size: 16px;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.issue-icon {
+  margin-right: 8px;
+  color: #dc3545;
+}
+
+/* No Tasks Message */
+.no-tasks-message {
+  font-size: 16px;
+  color: #777777;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Dialog Actions */
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+/* Dialog Buttons */
+.dialog-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.add-task-button {
+  background-color: #28a745;
+  color: #ffffff;
+}
+
+.add-task-button:hover {
+  background-color: #218838;
+}
+
+.button-icon {
+  margin-right: 8px;
+}
+
+.next-button {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.next-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.next-button:not(:disabled):hover {
+  background-color: #0069d9;
+}
+.dialog.dialog-step-1,.dialog.dialog-step-2{
+  width:600px;
+}
+.dialog.dialog-step-2.task-step-3,
+.dialog.dialog-step-2.task-step-4,
+.dialog.dialog-step-2.task-step-5,
+.dialog.dialog-step-2.task-step-0,
+.dialog.dialog-step-2.task-step-1{
+  width:95%;
+}
+.dialog.dialog-step-1 .sprint-name{
+  margin-bottom: 24px;
+} 
+.dialog-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  align-self: flex-end;
+}
+
+.dialog-close-button {
+  /* Optional: remove background, set color, etc. */
+  color: #555;
+}

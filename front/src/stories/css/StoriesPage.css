@@ -1,0 +1,190 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.board-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(135deg, #f5f5f5 25%, #e0f7fa 100%);
+  color: #333;
+  height: 100vh;
+  min-width:100vw;
+  width: max-content;
+
+}
+
+.board-container h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+  flex-shrink: 0;
+}
+
+.epics-row {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  align-items: flex-start;
+  padding: 20px;
+  height: calc(100% - 60px); /* Subtracting header margin and h2 height */
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.epic-column {
+  background: #fff;
+  border-radius: 10px;
+  min-width: 280px;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+  height: 100%;
+}
+
+.epic-column:hover {
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+.epic-title {
+  padding: 12px 16px;
+  border-radius: 10px 10px 0 0;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: center;
+  cursor: grab;
+  user-select: none;
+  color: #fff;
+  background: #26c6da;
+  margin: 0;
+  flex-shrink: 0;
+}
+.story-list {
+  display: grid; /* Use grid layout */
+  grid-template-columns: 1fr 1fr; /* Two columns per row */
+  gap: 10px; /* Space between grid items */
+  padding: 12px 16px;
+  border-radius: 0 0 10px 10px;
+  background: #fafafa;
+  height: 100%;
+  grid-auto-rows: 150px; /* Ensure consistent row height */
+  align-items: start; /* Align content to the top of each row */
+}
+.sticky-container::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle at 30% 30%, #86a9e8 0%, #4782da 70%);
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+
+.sticky-container {
+  max-width: 270px;
+  position: relative;
+  width: 150px;
+  height: 150px;
+ 
+}
+
+.sticky-outer {
+  display: flex;
+  padding-top: 92.5925926%;
+  position: relative;
+  width: 100%;
+}
+
+.sticky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.sticky:before {
+  box-shadow: -2px 2px 15px 0 rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.25);
+  content: '';
+  width: 90%;
+  left: 5px;
+  height: 75%;
+  position: absolute;
+  top: 30%;
+}
+
+.sticky-content {
+  background: linear-gradient(135deg, #f7e27c 0%, #fcf4b2 100%);
+  width: 100%;
+  height: 100%;
+  font-family: "Permanent Marker", cursive;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  clip-path: url(#stickyClip);
+  text-align:center;
+}
+
+.add-story-button {
+  margin-top: auto;
+  margin-bottom: 0; 
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+  cursor: pointer;
+  color: #333;
+  background: #e1e1e1;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-story-button:hover {
+  background: #d0d0d0;
+}
+
+.epics-row::-webkit-scrollbar {
+  height: 8px;
+}
+.epics-row::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+.epics-row::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 4px;
+}
+.epics-row::-webkit-scrollbar-thumb:hover {
+  background: #9e9e9e;
+}
+.board-container .add-button-stories{
+  position:fixed;
+  bottom:0;
+  right:0;
+  margin-right:30px;
+  z-index:100;
+}
+
+.status-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

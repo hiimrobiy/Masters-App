@@ -1,0 +1,58 @@
+/* Login.css */
+
+.login-page {
+    /* Full viewport height for a centered layout */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* Pastel teal background gradient */
+    background: linear-gradient(135deg, #f3faff 25%, #e0f7fa 100%);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .login-container {
+    background-color: #ffffff;
+    width: 350px;
+    max-width: 90%;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  /* Title & Subtitle */
+  .login-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+  }
+  .login-subtitle {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  /* Login button */
+  .login-button {
+    background-color: #26c6da;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 180px;
+  }
+  .login-button:hover {
+    background-color: #00bcd4; /* slightly darker teal */
+    transform: translateY(-2px);
+  }
+  .login-button:active {
+    background-color: #00acc1;
+    transform: translateY(0);
+  }
+  

@@ -1,0 +1,163 @@
+/* IssueCard.css */
+
+.issue-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.issue-card:hover {
+  box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.issue-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.issue-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.issue-card-dates {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.calendar-icon {
+  margin-right: 6px;
+  color: #888;
+}
+
+.issue-card-description {
+  font-size: 14px;
+  color: #555;
+  margin: 12px 0;
+}
+
+.issue-card-footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.issue-card-icon-group {
+  position: relative;
+}
+
+.icon-with-count {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 18px;
+  color: #555;
+}
+
+.icon-with-count span {
+  margin-left: 4px;
+  font-size: 14px;
+  color: #555;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  z-index: 10;
+  width: max-content;
+}
+
+.tooltip-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.tooltip-item:last-child {
+  margin-bottom: 0;
+}
+
+.tooltip-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
+.issue-card-icon-group:hover .tooltip {
+  display: block;
+}
+/* IssueCard.css */
+
+.issue-card {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.issue-card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.issue-card-header {
+  margin-bottom: 8px;
+}
+
+.issue-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.issue-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.assigned-users {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.expected-time {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666666;
+}
+
+.time-icon {
+  margin-right: 4px;
+  color: #007bff;
+}

@@ -1,0 +1,56 @@
+/* TaskNode.css */
+
+.task-node {
+  background-color: #fff3e0;
+  border: 1px solid #ffa726;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.task-node-content {
+  text-align: center;
+}
+
+.task-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.task-description {
+  font-size: 12px;
+  color: #555;
+}
+/* TaskNode.css */
+
+.task-node {
+  background-color: #fff3e0;
+  border: 1px solid #ffa726;
+  padding: 10px;
+  border-radius: 5px; /* Slightly rounded rectangle */
+  width: 150px;
+}
+
+.task-node-content {
+  text-align: center;
+}
+
+.task-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.task-description {
+  font-size: 12px;
+  color: #555;
+}
+/* TaskNode.css */
+
+.add-user-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #66bb6a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

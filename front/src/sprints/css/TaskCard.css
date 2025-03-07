@@ -1,0 +1,229 @@
+/* TaskCard.css */
+
+.task-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease;
+  }
+  
+  .task-card:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .task-card-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .task-card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .task-icon {
+    margin-right: 8px;
+  }
+  
+  .task-card-description {
+    font-size: 14px;
+    color: #555555;
+    margin: 8px 0;
+  }
+  
+  .task-card-footer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .assignee-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 4px;
+  }
+  /* TaskCard.css */
+
+.task-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  transition: box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.task-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  margin: 0;
+}
+
+.task-dates {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #888888;
+}
+
+.icon {
+  margin-right: 4px;
+  color: #007bff;
+}
+
+.task-description {
+  margin: 12px 0;
+  font-size: 14px;
+  color: #555555;
+}
+
+.task-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.assigned-users {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 4px;
+  border: 1px solid #cccccc;
+}
+
+.task-issues {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555555;
+}
+
+.bug-icon {
+  margin-right: 4px;
+  color: #dc3545;
+}
+.bug-icon-done {
+  margin-right: 4px;
+  color: #28a745;
+}
+/* Existing styles... */
+
+.task-card.expanded {
+  /* Adjusted styles for expanded card */
+  padding-bottom: 16px;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+}
+
+.expand-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333333;
+  font-size: 16px;
+}
+
+.issues-list {
+  margin-top: 16px;
+}
+
+.issue-item {
+  border-top: 1px solid #e0e0e0;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.issue-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.issue-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  margin-right: 8px;
+}
+
+.issue-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.elapsed-time-input {
+  width: 100px;
+  padding: 6px 8px;
+  margin-right: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.close-issue-button {
+  background-color: #dc3545;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.close-issue-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.close-issue-button .icon {
+  margin-right: 4px;
+}
+.task-issues-board{
+  display:flex;
+  justify-content:flex-end;
+  gap:10px;
+}
+.footer-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:20px;
+
+}
+.footer-info{
+  width:100%;
+}
+.not-set{
+  opacity: 0.5;
+}

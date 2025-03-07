@@ -1,0 +1,382 @@
+/* Styling for sticky tabs */
+.outer-div{
+  height: 100%;
+  width: 90%;
+  margin:0 auto;
+}
+ /* Styling the flow-container to control layout */
+ .flow-container {
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow around the container */
+   /* Prevents overflow from affecting layout */
+  background-color: white; /* Keeps the flow container distinct */
+  box-sizing: border-box;
+  width: 90%;
+  height:70vh; /* Center the flow container */
+  margin-top: 20px;
+
+}
+  .fixed-background-container {
+  /* Adds a bit of margin at the top for separation */
+    border-radius: 12px;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70vh;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7); /* Original shadow on click */
+  
+  
+  }
+
+  
+ 
+  .loading-spinner {
+    border: 4px solid rgba(0, 123, 255, 0.2); /* Light blue border */
+    border-top: 4px solid #007bff; /* Darker blue for spinner */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: auto; /* Center the spinner */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+/* Add New Issue Button */
+.add-issue-button {
+  /* Align it within the flow area */
+  background-color: #007bff; /* Consistent blue theme */
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 18px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+  border-color:#fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-issue-button:hover {
+  transform: translateY(-2px); /* Slight lift effect on hover */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5); /* Slightly enhanced shadow */
+}
+
+.add-issue-button:active {
+  transform: translateY(0); /* Reset on active */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Original shadow on click */
+}
+.add-repo-button{
+  background-color: #d32f2f; /* Slightly darker red on hover */
+  color: #fff;
+  font-size: 1rem; padding: 18px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+  border-color:#fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-issue-div{
+  display: flex;
+  width:50%;
+  height:20vh;
+  background-color:#fff;
+  align-items: center;
+  justify-content: flex-end;
+  gap:20px;
+
+}
+.header-repo{
+  display:flex;
+  width:90%;
+  
+}
+ /* Overlay for the dialog */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Dialog container */
+.dialog {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 400px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* Specific style for issue dialog */
+.issue-dialog {
+  border-top: 5px solid #007bff; /* Blue accent on top */
+}
+
+/* Dialog title */
+.dialog-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+/* Form group for input fields */
+.form-group {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+/* Label */
+.form-label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #555;
+  text-align: left;
+}
+
+/* Input fields */
+.dialog-input,
+.dialog-textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.dialog-input:focus,
+.dialog-textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Textarea specific styling */
+.dialog-textarea {
+  height: 80px;
+  resize: none;
+}
+
+/* Actions container */
+.dialog-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Buttons */
+.dialog-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dialog-button.create-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.dialog-button.create-button:hover {
+  background-color: #0056b3;
+}
+
+.dialog-button.cancel-button {
+  background-color: #e0e0e0;
+  color: #555;
+}
+
+.dialog-button.cancel-button:hover {
+  background-color: #ccc;
+}
+
+/* Message styles */
+.dialog-message {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #d9534f; /* Red for error or message */
+}
+/* AddButtons.css */
+
+/* Container for the buttons */
+.add-buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;/* Light background to distinguish the area */
+}
+
+/* Base styles for both buttons */
+.add-button {
+  display: flex;
+  align-items: center;
+  background-color: #26c6da; /* Primary blue color */
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 14px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  
+  box-shadow: 10px 10px 5px 12px lightblue;
+}
+
+.add-button .button-icon {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* Hover and active effects */
+.add-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
+
+.add-button:active {
+  background-color: #004085; /* Even darker blue on click */
+  transform: translateY(0);
+}
+
+/* Specific styles for the Add Repository button */
+
+/* Optional: Adjust the icon colors if needed */
+.add-button .button-icon {
+  color: inherit;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .add-buttons-container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .add-button {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+.add-button:focus {
+  outline: 2px dashed #0056b3;
+  outline-offset: 2px;
+}
+.add-button {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.react-flow__edges .react-flow__edge-path {
+  stroke: #C0C0C0;
+  stroke-width: 7px;
+}
+.dialog.repo-dialog{
+  width:30%;
+  height:200px;
+}
+.dialog.issue-dialog{
+  width:30%;
+  gap:15px;
+  height:max-content;
+}
+/* Labels Section */
+.labels-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.label-chip {
+  padding: 6px 12px;
+  background-color: #f0f0f0;
+  border-radius: 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.label-chip.selected {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.label-chip:hover {
+  background-color: #e0e0e0;
+}
+
+/* Assignees Section */
+.assignees-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.assignee-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.assignee-item.selected {
+  transform: translateY(-5px);
+}
+
+.assignee-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 6px;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.assignee-item.selected .assignee-avatar {
+  border-color: #007bff;
+}
+
+.assignee-name {
+  font-size: 12px;
+  text-align: center;
+  color: #333;
+}
+
+.assignee-item:hover .assignee-avatar {
+  border-color: #007bff;
+}
+.add-button.add-repo-button:hover,
+.add-button.add-issue-button:hover{
+opacity:0.5;
+background-color: #26c6da;
+}

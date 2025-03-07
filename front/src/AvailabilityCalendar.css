@@ -1,0 +1,17 @@
+.day-free {
+    background-color: #e0ffe0; /* Light green */
+  }
+  
+  .day-busy {
+    background-color: #ffe0e0; /* Light red */
+  }
+  /* availabilityCalendar.css */
+.fc-theme-standard .fc-daygrid-event {
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .fc .fc-toolbar-title {
+    font-size: 1.25rem;
+  }
+  

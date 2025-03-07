@@ -1,0 +1,193 @@
+
+
+.tab {
+  flex: 1 0 auto; /* Ensures equal sizing while allowing wrapping if needed */
+  min-width: 150px; /* Set the minimum width for tabs */
+  max-width: 150px; /* Set the maximum width for consistency */
+  height: 50px; /* Set a fixed height for tabs */
+  text-align: center; /* Center-align text inside the tab */
+  display: flex; /* Use flexbox to align text vertically and horizontally */
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+  background-color: #d0d4d8; /* Inactive background color */
+  color: #555; /* Inactive text color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.active-tab {
+  background-color: #ffffff;
+  color: #26c6da; /* Blue color for active text */
+  font-weight: bold;
+  border-bottom: 3px solid #26c6da; /* Visible blue underline */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.inactive-tab {
+  background-color: #d0d4d8; /* Slightly darker background for inactive tabs */
+  color: #888; /* Lighter text for inactive tabs */
+}
+
+.tab:hover {
+  background-color: #c2c7cc; /* Slightly lighter on hover */
+  color: #333; /* Darker text color on hover */
+}
+
+
+.add-new:hover {
+  background-color: #c2c7cc;
+}
+
+/* Dialog overlay and styling */
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  max-width: 80%;
+}
+
+.dialog-input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.dialog-button {
+  padding: px 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 8px;
+}
+
+.dialog-button:hover {
+  background-color: #0056b3;
+}
+
+.dialog-button.cancel {
+  background-color: #f1f3f5;
+  color: #555;
+}
+
+.dialog-button.cancel:hover {
+  background-color: #e0e0e0;
+}
+
+.dialog-message {
+  color: #d9534f;
+  margin-top: 10px;
+}
+/* Add a specific style for the New Repo tab */
+
+.add-new{
+  flex: 1 0 auto; /* Ensures equal sizing while allowing wrapping if needed */
+  min-width: 150px; /* Set the minimum width for tabs */
+  max-width: 150px; /* Set the maximum width for consistency */
+  height: 50px; /* Set a fixed height for tabs */
+  text-align: center; /* Center-align text inside the tab */
+  display: flex; /* Use flexbox to align text vertically and horizontally */
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px 8px 0 0;
+  color: #ff4d4f; /* Red text color */
+  background-color: #fff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+
+}
+.add-new:hover {
+  background-color: #f5c6cb; /* Slightly darker red on hover */
+  color: #d32f2f; /* Darker red text color on hover */
+}
+/* Tabs wrapper with scrolling buttons */
+.tabs-wrapper {
+  display:flex;
+  align-items: center;
+  overflow: hidden; /* Prevent native scrolling */
+  justify-content: flex-start;
+  width: 70%;
+  height: 20vh;
+  box-sizing: border-box;
+  gap:10px;
+  margin-top: 10 px;
+  
+
+}
+
+/* Scroll buttons */
+.scroll-button {
+  background: #26c6da; /* Match blue theme */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.scroll-button-div {
+  width:3% ;
+}
+
+
+
+/* Tabs container with scrolling functionality */
+.tabs-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+  padding: 10px;
+  box-sizing: border-box;
+  width: max-content;
+  max-width: 800px;
+  min-width: 300px;
+    
+  
+}
+
+.tabs-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+.scroll-button:hover {
+  background-color: #0056b3; /* Slightly darker blue on hover */
+}
+
+.scroll-button.left {
+  left: 10px; /* Position to the left */
+}
+
+.scroll-button.right {
+  right: 10px; /* Position to the right */
+}

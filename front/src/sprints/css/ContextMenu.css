@@ -1,0 +1,36 @@
+.context-menu {
+  position: absolute;
+  background-color: #f8f9fa;
+  border: 1px solid #dddddd;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1000;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.context-menu:hover {
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.context-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.context-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.context-menu li:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+  color: #007bff;
+}
+
+.context-menu li.disabled {
+  color: #999;
+  cursor: not-allowed;
+}

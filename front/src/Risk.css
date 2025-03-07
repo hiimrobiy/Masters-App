@@ -1,0 +1,24 @@
+.MuiBox-root.css-uz4upy{
+    height:90vh;
+    width:95%;
+}
+.risk-container {
+  max-height: 250px;
+  overflow-y: auto;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(255, 255, 255, 0);
+}
+
+/* Custom scrollbar for Webkit browsers (Chrome, Edge, Safari) */
+.risk-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.risk-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+
+.risk-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}

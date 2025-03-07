@@ -1,0 +1,39 @@
+.task-tooltip {
+  position: absolute;
+  top: -10px;
+  left: 110%;
+  background: linear-gradient(135deg, #333333, #555555); /* Dark gradient for better contrast */
+  color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 250px;
+  width : fit-content;
+  font-size: 0.9em;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  pointer-events: none;
+  transform: translateY(-10px);
+  z-index:9999;
+}
+
+.custom-node:hover .task-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.task-tooltip p {
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.task-tooltip a {
+  color: #42a5f5;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.task-tooltip a:hover {
+  color: #ff7043;
+}

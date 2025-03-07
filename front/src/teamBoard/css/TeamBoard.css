@@ -1,0 +1,73 @@
+.team-board {
+ width:90%;
+ margin:0 auto
+}
+.groups{
+  width:90%;
+ 
+}
+/* Group container */
+.group {
+  margin-bottom: 40px;
+}
+
+/* Group title */
+.group-title {
+  font-size: 1.5em;
+  font-weight: 400; /* Thinner font */
+  margin-bottom: 10px;
+  text-align: left;
+  position: relative;
+  padding-bottom: 8px;
+  color: #26c6da; /* Primary blue */
+}
+
+/* Group title underline */
+.group-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px; /* Thinner underline */
+  width: 30%; /* Shorter underline */
+  background: #26c6da; /* Solid primary blue for underline */
+}
+
+
+.group-title.available::after {
+  background: #26c6da; /* Solid blue underline */
+}
+
+
+
+.group-title.moderate::after {
+  background: #26c6da; /* Standard solid underline */
+}
+
+
+
+.group-title.occupied::after {
+  background: #26c6da; /* Solid lighter blue */
+}
+
+/* Collaborators displayed horizontally within a group */
+.collaborator-row {
+  display: flex;
+  gap: 20px; /* Add spacing between cards */
+  flex-wrap: wrap; /* Allow wrapping if there are too many items */
+  justify-content: flex-start;
+}
+/* Group container with shadow */
+.group {
+  margin-bottom: 40px;
+  padding: 20px; /* Add padding inside the row for spacing */
+  background: #fff; /* White background for the group container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+/* Add hover effect for the group row */
+.group:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8); /* Stronger shadow on hover */
+}

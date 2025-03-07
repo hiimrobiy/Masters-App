@@ -1,0 +1,197 @@
+.custom-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Reverted to original color gradient */
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 15px;
+  min-width: 220px;
+  max-width: 300px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.custom-node:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.custom-node .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+.custom-node .title {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.custom-node .bottom-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.custom-node .labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.custom-node .label-container {
+  background-color: #fff;
+  color: #f37272;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.85em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.custom-node .capacity-info {
+  font-weight: 600;
+}
+
+.custom-node .status-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #34eb86; /* Green for active status */
+  box-shadow: 0 0 8px rgba(52, 235, 134, 0.5);
+}
+
+/* Handle styles */
+.react-flow__handle {
+  background-color: #fff;
+  border: 2px solid #f5e777;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.react-flow__handle:hover {
+  box-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
+}
+
+/* Priority-based styling */
+.high-priority {
+  background: linear-gradient(135deg, #c62828, #ef5350); /* Mature deep red gradient */
+  box-shadow: 0 6px 15px rgba(198, 40, 40, 0.3);
+}
+
+.low-priority {
+  background: linear-gradient(135deg, #1565c0, #5e92f3); /* Muted blue gradient */
+  box-shadow: 0 6px 15px rgba(21, 101, 192, 0.3);
+}
+
+.normal-priority {
+  background: linear-gradient(135deg, #ff8f00, #ffb74d); /* Warm amber gradient */
+  box-shadow: 0 6px 15px rgba(255, 143, 0, 0.3);
+}
+
+.custom-node .priority-dropdown {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.custom-node .priority-dropdown label {
+  margin-right: 5px;
+}
+
+.custom-node .priority-dropdown select {
+  padding: 3px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 0.9em;
+}
+
+/* Custom translucent dropdown styling */
+.custom-node select {
+  background-color: rgba(255, 255, 255, 0.7); /* Light translucent background */
+  border: 1px solid rgba(200, 200, 200, 0.5); /* Soft border with transparency */
+  border-radius: 6px; /* Rounded corners */
+  color: #333; /* Text color */
+  padding: 5px 12px;
+  font-size: 0.9em;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  backdrop-filter: blur(8px); /* Add blur effect to enhance translucency */
+}
+
+/* Add subtle hover effect */
+.custom-node select:hover {
+  background-color: rgba(255, 255, 255, 0.85); /* Slightly less transparent on hover */
+  border-color: rgba(160, 160, 160, 0.5);
+}
+
+/* Style dropdown arrow */
+.custom-node select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10' viewBox='0 0 24 24'%3E%3Cpath fill='%23333' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
+}
+
+/* Optional: Customize options within the dropdown */
+.custom-node select option {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.85); /* Lightly translucent background */
+  color: #333;
+  font-weight: 400;
+}
+
+/* Edge styles */
+.react-flow__edge-path {
+  filter: drop-shadow(0px 0px 4px rgba(74, 144, 226, 0.6)); /* Soft blue glow */
+}
+
+.custom-node.locked {
+  opacity: 0.1;
+  cursor: not-allowed;
+}
+.custom-node.in-task {
+  background: #04cb2f;/* highlight color */
+  opacity: 0.4;
+}
+
+.custom-node.in-current {
+  background: #04cb2f; /* highlight color */
+}
+.issue-node-locked-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(220, 53, 69, 0.5); /* Red overlay */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 8px;
+  pointer-events: none;
+}
+.custom-node.inAnytask {
+  background:rgb(91, 230, 121);/* highlight color */
+  opacity: 0.4;
+}
